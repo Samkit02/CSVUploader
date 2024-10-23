@@ -87,6 +87,13 @@ The React development server will be running on `http://localhost:3000`.
 - You can upload a CSV file from the frontend form.
 - After successful upload, visit `http://localhost:8000/admin` to view the uploaded data (if admin access is set up).
 
+### Django Admin Credentials
+
+To access the Django admin panel and check the uploaded data, use the following superuser credentials:
+
+- **Username**: `samkitshah`
+- **Password**: `S@mkit123`
+
 ## Example CSV File Format
 
 I have added the sample_data.csv in the Repo.
