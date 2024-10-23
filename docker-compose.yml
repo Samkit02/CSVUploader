@@ -1,13 +1,20 @@
 version: '3'
+
 services:
-  web:
-    build: .
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/app
+  backend:
+    build: .  # Refers to the root directory where the backend Dockerfile is
     ports:
       - "8000:8000"
+    volumes:
+      - .:/app
+    depends_on:
+      - frontend
+
   frontend:
-    build: ./frontend
+    build: ./frontend  # Refers to the frontend directory where the Dockerfile is located
     ports:
       - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    stdin_open: true
+    tty: true
